@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		963B62FA244A40FE00EF5F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B62F9244A40FE00EF5F4F /* AppDelegate.swift */; };
+		963B62FC244A40FE00EF5F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */; };
+		963B62FE244A40FE00EF5F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B62FD244A40FE00EF5F4F /* ViewController.swift */; };
+		963B6301244A40FE00EF5F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963B62FF244A40FE00EF5F4F /* Main.storyboard */; };
+		963B6303244A410600EF5F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963B6302244A410600EF5F4F /* Assets.xcassets */; };
+		963B6306244A410600EF5F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963B6304244A410600EF5F4F /* LaunchScreen.storyboard */; };
+		963B6311244A410600EF5F4F /* TMobileChallenageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B6310244A410600EF5F4F /* TMobileChallenageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		963B630D244A410600EF5F4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 963B62EE244A40FE00EF5F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 963B62F5244A40FE00EF5F4F;
+			remoteInfo = TMobileChallenage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		963B62F6244A40FE00EF5F4F /* TMobileChallenage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMobileChallenage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		963B62F9244A40FE00EF5F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		963B62FD244A40FE00EF5F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		963B6300244A40FE00EF5F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		963B6302244A410600EF5F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		963B6305244A410600EF5F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		963B6307244A410600EF5F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963B630C244A410600EF5F4F /* TMobileChallenageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMobileChallenageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		963B6310244A410600EF5F4F /* TMobileChallenageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMobileChallenageTests.swift; sourceTree = "<group>"; };
+		963B6312244A410600EF5F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		963B62F3244A40FE00EF5F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		963B6309244A410600EF5F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		963B62ED244A40FE00EF5F4F = {
+			isa = PBXGroup;
+			children = (
+				963B62F8244A40FE00EF5F4F /* TMobileChallenage */,
+				963B630F244A410600EF5F4F /* TMobileChallenageTests */,
+				963B62F7244A40FE00EF5F4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		963B62F7244A40FE00EF5F4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				963B62F6244A40FE00EF5F4F /* TMobileChallenage.app */,
+				963B630C244A410600EF5F4F /* TMobileChallenageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		963B62F8244A40FE00EF5F4F /* TMobileChallenage */ = {
+			isa = PBXGroup;
+			children = (
+				963B62F9244A40FE00EF5F4F /* AppDelegate.swift */,
+				963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */,
+				963B62FD244A40FE00EF5F4F /* ViewController.swift */,
+				963B62FF244A40FE00EF5F4F /* Main.storyboard */,
+				963B6302244A410600EF5F4F /* Assets.xcassets */,
+				963B6304244A410600EF5F4F /* LaunchScreen.storyboard */,
+				963B6307244A410600EF5F4F /* Info.plist */,
+			);
+			path = TMobileChallenage;
+			sourceTree = "<group>";
+		};
+		963B630F244A410600EF5F4F /* TMobileChallenageTests */ = {
+			isa = PBXGroup;
+			children = (
+				963B6310244A410600EF5F4F /* TMobileChallenageTests.swift */,
+				963B6312244A410600EF5F4F /* Info.plist */,
+			);
+			path = TMobileChallenageTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		963B62F5244A40FE00EF5F4F /* TMobileChallenage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 963B6315244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenage" */;
+			buildPhases = (
+				963B62F2244A40FE00EF5F4F /* Sources */,
+				963B62F3244A40FE00EF5F4F /* Frameworks */,
+				963B62F4244A40FE00EF5F4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMobileChallenage;
+			productName = TMobileChallenage;
+			productReference = 963B62F6244A40FE00EF5F4F /* TMobileChallenage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		963B630B244A410600EF5F4F /* TMobileChallenageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 963B6318244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenageTests" */;
+			buildPhases = (
+				963B6308244A410600EF5F4F /* Sources */,
+				963B6309244A410600EF5F4F /* Frameworks */,
+				963B630A244A410600EF5F4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				963B630E244A410600EF5F4F /* PBXTargetDependency */,
+			);
+			name = TMobileChallenageTests;
+			productName = TMobileChallenageTests;
+			productReference = 963B630C244A410600EF5F4F /* TMobileChallenageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		963B62EE244A40FE00EF5F4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Jason;
+				TargetAttributes = {
+					963B62F5244A40FE00EF5F4F = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					963B630B244A410600EF5F4F = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 963B62F5244A40FE00EF5F4F;
+					};
+				};
+			};
+			buildConfigurationList = 963B62F1244A40FE00EF5F4F /* Build configuration list for PBXProject "TMobileChallenage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 963B62ED244A40FE00EF5F4F;
+			productRefGroup = 963B62F7244A40FE00EF5F4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				963B62F5244A40FE00EF5F4F /* TMobileChallenage */,
+				963B630B244A410600EF5F4F /* TMobileChallenageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		963B62F4244A40FE00EF5F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963B6306244A410600EF5F4F /* LaunchScreen.storyboard in Resources */,
+				963B6303244A410600EF5F4F /* Assets.xcassets in Resources */,
+				963B6301244A40FE00EF5F4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		963B630A244A410600EF5F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		963B62F2244A40FE00EF5F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963B62FE244A40FE00EF5F4F /* ViewController.swift in Sources */,
+				963B62FA244A40FE00EF5F4F /* AppDelegate.swift in Sources */,
+				963B62FC244A40FE00EF5F4F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		963B6308244A410600EF5F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963B6311244A410600EF5F4F /* TMobileChallenageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		963B630E244A410600EF5F4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 963B62F5244A40FE00EF5F4F /* TMobileChallenage */;
+			targetProxy = 963B630D244A410600EF5F4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		963B62FF244A40FE00EF5F4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				963B6300244A40FE00EF5F4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		963B6304244A410600EF5F4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				963B6305244A410600EF5F4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		963B6313244A410600EF5F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		963B6314244A410600EF5F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		963B6316244A410600EF5F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TMobileChallenage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apolis.TMobileChallenage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		963B6317244A410600EF5F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TMobileChallenage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apolis.TMobileChallenage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		963B6319244A410600EF5F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TMobileChallenageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apolis.TMobileChallenageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMobileChallenage.app/TMobileChallenage";
+			};
+			name = Debug;
+		};
+		963B631A244A410600EF5F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TMobileChallenageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apolis.TMobileChallenageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMobileChallenage.app/TMobileChallenage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		963B62F1244A40FE00EF5F4F /* Build configuration list for PBXProject "TMobileChallenage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963B6313244A410600EF5F4F /* Debug */,
+				963B6314244A410600EF5F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		963B6315244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963B6316244A410600EF5F4F /* Debug */,
+				963B6317244A410600EF5F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		963B6318244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963B6319244A410600EF5F4F /* Debug */,
+				963B631A244A410600EF5F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 963B62EE244A40FE00EF5F4F /* Project object */;
+}
