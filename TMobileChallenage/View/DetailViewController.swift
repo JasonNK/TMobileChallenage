@@ -84,11 +84,18 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.detailTableView.dequeueReusableCell(withIdentifier: StringConstants.detailCellIdentifier.rawValue, for: indexPath)
-        cell.textLabel?.text = detailViewModel.searchRepos[indexPath.row].name
+        var cellTemp = self.detailTableView.dequeueReusableCell(withIdentifier: StringConstants.detailCellIdentifier.rawValue, for: indexPath) as? DetailRepoTableViewCell
+        
+        guard let cell = cellTemp else {return DetailRepoTableViewCell()}
+        
+        cell.repoNameLabel?.text = detailViewModel.searchRepos[indexPath.row].name
         let fork_count = detailViewModel.searchRepos[indexPath.row].forks_count
         let star_count = detailViewModel.searchRepos[indexPath.row].stargazers_count
-        cell.detailTextLabel?.text = "\(fork_count) Forks\n\(star_count) Stars"
+        cell.statLabel?.text = """
+        \(fork_count) Forks
+        \(star_count) Stars
+        """
+        cell.detailTextLabel?.textAlignment = .left
         return cell
     }
     

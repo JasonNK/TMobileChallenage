@@ -38,7 +38,6 @@ class WebUtil {
             }
             
             guard let httpResp = resp as? HTTPURLResponse, (200...299).contains(httpResp.statusCode) else {
-                print(String(data: data!, encoding: .utf8))
                 completion(nil, APPError.NILHTTPResponse)
                 return
             }

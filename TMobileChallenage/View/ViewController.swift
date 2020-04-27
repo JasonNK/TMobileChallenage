@@ -111,7 +111,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = self.storyboard?.instantiateViewController(identifier: StringConstants.detailViewControllerId.rawValue) as? DetailViewController
-        // TODO: might have problem when clicking before repo number shows up
         detailViewController?.userDetail = viewModel.users[indexPath.row].detail
         navigationController?.pushViewController(detailViewController!, animated: true)
         
