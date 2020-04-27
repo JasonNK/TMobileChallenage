@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,15 @@
 		963B6303244A410600EF5F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963B6302244A410600EF5F4F /* Assets.xcassets */; };
 		963B6306244A410600EF5F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963B6304244A410600EF5F4F /* LaunchScreen.storyboard */; };
 		963B6311244A410600EF5F4F /* TMobileChallenageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B6310244A410600EF5F4F /* TMobileChallenageTests.swift */; };
+		963B631C244A4C2700EF5F4F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B631B244A4C2700EF5F4F /* UserViewModel.swift */; };
+		963B631E244A4C6A00EF5F4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B631D244A4C6A00EF5F4F /* Model.swift */; };
+		963B6320244A65AC00EF5F4F /* WebUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B631F244A65AC00EF5F4F /* WebUtil.swift */; };
+		963B6322244CE4D100EF5F4F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B6321244CE4D100EF5F4F /* DetailViewController.swift */; };
+		963B6324244D029E00EF5F4F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B6323244D029E00EF5F4F /* DetailViewModel.swift */; };
+		963B632B2457721B00EF5F4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B632A2457721B00EF5F4F /* Constants.swift */; };
+		963B632D24577FA500EF5F4F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B632C24577FA400EF5F4F /* AppError.swift */; };
+		9A0A4661D203B71A162C9B33 /* Pods_TMobileChallenageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C9A957C452D5E372F3A60 /* Pods_TMobileChallenageTests.framework */; };
+		D34810A1E8451D47842B774A /* Pods_TMobileChallenage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DFE1DFE3F3B6297C54B2BD /* Pods_TMobileChallenage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		453C9A957C452D5E372F3A60 /* Pods_TMobileChallenageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMobileChallenageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DFE1DFE3F3B6297C54B2BD /* Pods_TMobileChallenage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMobileChallenage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73802DF081DBBE030326AC43 /* Pods-TMobileChallenageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMobileChallenageTests.release.xcconfig"; path = "Target Support Files/Pods-TMobileChallenageTests/Pods-TMobileChallenageTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B3E04EDD8A47D31DEFE9914 /* Pods-TMobileChallenage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMobileChallenage.release.xcconfig"; path = "Target Support Files/Pods-TMobileChallenage/Pods-TMobileChallenage.release.xcconfig"; sourceTree = "<group>"; };
+		90F049FC826568CB0184E812 /* Pods-TMobileChallenage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMobileChallenage.debug.xcconfig"; path = "Target Support Files/Pods-TMobileChallenage/Pods-TMobileChallenage.debug.xcconfig"; sourceTree = "<group>"; };
 		963B62F6244A40FE00EF5F4F /* TMobileChallenage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMobileChallenage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963B62F9244A40FE00EF5F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +52,14 @@
 		963B630C244A410600EF5F4F /* TMobileChallenageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMobileChallenageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963B6310244A410600EF5F4F /* TMobileChallenageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMobileChallenageTests.swift; sourceTree = "<group>"; };
 		963B6312244A410600EF5F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963B631B244A4C2700EF5F4F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		963B631D244A4C6A00EF5F4F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		963B631F244A65AC00EF5F4F /* WebUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUtil.swift; sourceTree = "<group>"; };
+		963B6321244CE4D100EF5F4F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		963B6323244D029E00EF5F4F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		963B632A2457721B00EF5F4F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		963B632C24577FA400EF5F4F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A79721EC14F0A5D9FCF61340 /* Pods-TMobileChallenageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMobileChallenageTests.debug.xcconfig"; path = "Target Support Files/Pods-TMobileChallenageTests/Pods-TMobileChallenageTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34810A1E8451D47842B774A /* Pods_TMobileChallenage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0A4661D203B71A162C9B33 /* Pods_TMobileChallenageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +88,8 @@
 				963B62F8244A40FE00EF5F4F /* TMobileChallenage */,
 				963B630F244A410600EF5F4F /* TMobileChallenageTests */,
 				963B62F7244A40FE00EF5F4F /* Products */,
+				E71350317FBA7A4D725AC2C7 /* Pods */,
+				AEDABF1B34069D46A47EFA14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +105,17 @@
 		963B62F8244A40FE00EF5F4F /* TMobileChallenage */ = {
 			isa = PBXGroup;
 			children = (
+				963B6326245770CE00EF5F4F /* Constants */,
 				963B62F9244A40FE00EF5F4F /* AppDelegate.swift */,
 				963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */,
-				963B62FD244A40FE00EF5F4F /* ViewController.swift */,
+				963B63292457712300EF5F4F /* View */,
 				963B62FF244A40FE00EF5F4F /* Main.storyboard */,
 				963B6302244A410600EF5F4F /* Assets.xcassets */,
 				963B6304244A410600EF5F4F /* LaunchScreen.storyboard */,
 				963B6307244A410600EF5F4F /* Info.plist */,
+				963B6327245770DE00EF5F4F /* Model */,
+				963B6328245770ED00EF5F4F /* WebUtil */,
+				963B63252457703100EF5F4F /* ViewModel */,
 			);
 			path = TMobileChallenage;
 			sourceTree = "<group>";
@@ -99,6 +129,69 @@
 			path = TMobileChallenageTests;
 			sourceTree = "<group>";
 		};
+		963B63252457703100EF5F4F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				963B631B244A4C2700EF5F4F /* UserViewModel.swift */,
+				963B6323244D029E00EF5F4F /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		963B6326245770CE00EF5F4F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				963B632A2457721B00EF5F4F /* Constants.swift */,
+				963B632C24577FA400EF5F4F /* AppError.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		963B6327245770DE00EF5F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				963B631D244A4C6A00EF5F4F /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		963B6328245770ED00EF5F4F /* WebUtil */ = {
+			isa = PBXGroup;
+			children = (
+				963B631F244A65AC00EF5F4F /* WebUtil.swift */,
+			);
+			path = WebUtil;
+			sourceTree = "<group>";
+		};
+		963B63292457712300EF5F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				963B62FD244A40FE00EF5F4F /* ViewController.swift */,
+				963B6321244CE4D100EF5F4F /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEDABF1B34069D46A47EFA14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52DFE1DFE3F3B6297C54B2BD /* Pods_TMobileChallenage.framework */,
+				453C9A957C452D5E372F3A60 /* Pods_TMobileChallenageTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E71350317FBA7A4D725AC2C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90F049FC826568CB0184E812 /* Pods-TMobileChallenage.debug.xcconfig */,
+				8B3E04EDD8A47D31DEFE9914 /* Pods-TMobileChallenage.release.xcconfig */,
+				A79721EC14F0A5D9FCF61340 /* Pods-TMobileChallenageTests.debug.xcconfig */,
+				73802DF081DBBE030326AC43 /* Pods-TMobileChallenageTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963B6315244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenage" */;
 			buildPhases = (
+				3C088B6C40F07DA3CF0B89C2 /* [CP] Check Pods Manifest.lock */,
 				963B62F2244A40FE00EF5F4F /* Sources */,
 				963B62F3244A40FE00EF5F4F /* Frameworks */,
 				963B62F4244A40FE00EF5F4F /* Resources */,
+				6DDF4B5D067C01638557D20D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963B6318244A410600EF5F4F /* Build configuration list for PBXNativeTarget "TMobileChallenageTests" */;
 			buildPhases = (
+				81D9D66989688F4891760BC4 /* [CP] Check Pods Manifest.lock */,
 				963B6308244A410600EF5F4F /* Sources */,
 				963B6309244A410600EF5F4F /* Frameworks */,
 				963B630A244A410600EF5F4F /* Resources */,
@@ -195,14 +291,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C088B6C40F07DA3CF0B89C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMobileChallenage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DDF4B5D067C01638557D20D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMobileChallenage/Pods-TMobileChallenage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMobileChallenage/Pods-TMobileChallenage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TMobileChallenage/Pods-TMobileChallenage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81D9D66989688F4891760BC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMobileChallenageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		963B62F2244A40FE00EF5F4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B631E244A4C6A00EF5F4F /* Model.swift in Sources */,
+				963B6320244A65AC00EF5F4F /* WebUtil.swift in Sources */,
+				963B632D24577FA500EF5F4F /* AppError.swift in Sources */,
 				963B62FE244A40FE00EF5F4F /* ViewController.swift in Sources */,
+				963B631C244A4C2700EF5F4F /* UserViewModel.swift in Sources */,
 				963B62FA244A40FE00EF5F4F /* AppDelegate.swift in Sources */,
 				963B62FC244A40FE00EF5F4F /* SceneDelegate.swift in Sources */,
+				963B6322244CE4D100EF5F4F /* DetailViewController.swift in Sources */,
+				963B6324244D029E00EF5F4F /* DetailViewModel.swift in Sources */,
+				963B632B2457721B00EF5F4F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +527,12 @@
 		};
 		963B6316244A410600EF5F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F049FC826568CB0184E812 /* Pods-TMobileChallenage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMobileChallenage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,10 +546,12 @@
 		};
 		963B6317244A410600EF5F4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3E04EDD8A47D31DEFE9914 /* Pods-TMobileChallenage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMobileChallenage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +565,7 @@
 		};
 		963B6319244A410600EF5F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79721EC14F0A5D9FCF61340 /* Pods-TMobileChallenageTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +587,7 @@
 		};
 		963B631A244A410600EF5F4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73802DF081DBBE030326AC43 /* Pods-TMobileChallenageTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
