@@ -86,7 +86,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cellTemp = self.detailTableView.dequeueReusableCell(withIdentifier: StringConstants.detailCellIdentifier.rawValue, for: indexPath) as? DetailRepoTableViewCell
+        let cellTemp = self.detailTableView.dequeueReusableCell(withIdentifier: StringConstants.detailCellIdentifier.rawValue, for: indexPath) as? DetailRepoTableViewCell
         
         guard let cell = cellTemp else {return DetailRepoTableViewCell()}
         
@@ -102,9 +102,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let urlString = detailViewModel.repos[indexPath.row].html_url else {
-            return
-        }
+        guard let urlString = detailViewModel.repos[indexPath.row].html_url else { return }
         if let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }

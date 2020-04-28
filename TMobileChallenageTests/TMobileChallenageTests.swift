@@ -78,6 +78,7 @@ class TMobileChallenageTests: XCTestCase {
         
         WebUtil.init(urlSession: MockURLSession()).getCodedData(urlString: "test.users.com") { (users: [User]?, error) in
             XCTAssertNotNil(users)
+            XCTAssertEqual(users?.count, 2)
             XCTAssertNil(error)
         }
         

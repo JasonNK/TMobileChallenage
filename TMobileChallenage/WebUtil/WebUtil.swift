@@ -46,6 +46,7 @@ class WebUtil {
                 completion(nil, APPError.DataNIL)
                 return
             }
+            print(String.init(data: data, encoding: .utf8))
             completion(data, nil)
         }
     }

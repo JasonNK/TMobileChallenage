@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     var isSeaching = false
     var curPage = 1
     let countPerPage = IntConstants.countMainPerPage.rawValue
-    var searchText = ""
-    var timer: Timer?
+    var lastestSearchText = ""
+    let activityView = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.activityView.center = self.view.center
         searchBar.delegate = self
         tableV.dataSource = self
         tableV.delegate = self
@@ -29,33 +30,55 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] (t) in
-            guard let self = self else {return}
-            if !searchText.isEmpty {
-                let n = searchText.count
-                if n < self.searchText.count { self.curPage = 1 }
-                self.isSeaching = true
-                let aView = UIActivityIndicatorView()
-                aView.center = self.view.center
-                aView.startAnimating()
-                self.view.addSubview(aView)
-                self.searchText = searchText
-                self.viewModel.searchFor(username: searchText, curPage: self.curPage) {
-                    DispatchQueue.main.async {
-                        aView.removeFromSuperview()
-                        self.isSeaching = false
-                        self.tableV.reloadData()
-                    }
+    
+    func prepareSearch(_ curSearchText: String) {
+        if curSearchText.count < self.lastestSearchText.count { self.curPage = 1 }
+        self.isSeaching = true
+        self.activityView.startAnimating()
+        self.view.addSubview(self.activityView)
+        self.lastestSearchText = curSearchText
+    }
+    
+    func finishSearch() {
+        self.activityView.removeFromSuperview()
+        self.isSeaching = false
+        self.tableV.reloadData()
+    }
+    
+    func searchProcess(_ lastSearchText: String) {
+        if self.lastestSearchText == lastSearchText {
+            self.finishSearch()
+        } else {
+            let curSearch = self.lastestSearchText
+            self.viewModel.searchFor(username: curSearch, curPage: self.curPage) {
+                DispatchQueue.main.async {
+                    self.searchProcess(curSearch)
                 }
-            } else {
-                self.curPage = 1
-                self.searchText = ""
             }
-        })
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if self.isSeaching {
+            self.lastestSearchText = searchText
+            return
+        }
+        if searchText.isEmpty {
+            self.curPage = 1
+            self.lastestSearchText = ""
+            return
+        }
         
+        self.prepareSearch(searchText)
         
+        self.viewModel.searchFor(username: searchText, curPage: self.curPage) {
+            DispatchQueue.main.async {
+                self.searchProcess(searchText)
+            }
+        }
+    
+        
+
     }
 
     
@@ -67,16 +90,12 @@ extension ViewController: UITableViewDataSourcePrefetching {
         for indexPath in indexPaths {
             if indexPath.row == curPage * countPerPage - 1 {
                 curPage += 1
-                isSeaching = true
-                self.searchBar.isUserInteractionEnabled = false
-                let aView = UIActivityIndicatorView()
-                aView.center = self.view.center
-                aView.startAnimating()
-                self.view.addSubview(aView)
-                viewModel.searchFor(username: searchText, curPage: curPage) {
+                self.isSeaching = true
+                self.activityView.startAnimating()
+                self.view.addSubview(self.activityView)
+                viewModel.searchFor(username: lastestSearchText, curPage: curPage) {
                     DispatchQueue.main.async {
-                        aView.removeFromSuperview()
-                        self.searchBar.isUserInteractionEnabled = true
+                        self.activityView.removeFromSuperview()
                         self.isSeaching = false
                         let startRow = (self.curPage - 1) * self.countPerPage
                         var indexPaths = [IndexPath]()

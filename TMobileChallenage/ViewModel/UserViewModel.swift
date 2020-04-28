@@ -16,7 +16,8 @@ class UserViewModel {
         
         let url = StringConstants.userSearchEnd.rawValue + username
         let dg = DispatchGroup()
-        webUtil.getCodedData(urlString: url + "&page=\(curPage)") { (userStatistic: UserWrapper?, error) in
+        webUtil.getCodedData(urlString: url + "&page=\(curPage)") {[weak self] (userStatistic: UserWrapper?, error) in
+            guard let self = self else { return }
             let result = userStatistic?.items ?? []
             if curPage == 1 {
                 self.users = result
@@ -27,12 +28,16 @@ class UserViewModel {
             for i in 0..<n {
 
                 dg.enter()
-                self.webUtil.getData(urlString: self.users[i].avatar_url) { (data, error) in
+                self.webUtil.getData(urlString: self.users[i].avatar_url) { [weak self] (data, error) in
+                    guard let self = self else { return }
+                    
                     self.users[i].image = data
                     dg.leave()
                 }
                 dg.enter()
-                self.webUtil.getCodedData(urlString: self.users[i].url) { (detail: Detail?, error) in
+                self.webUtil.getCodedData(urlString: self.users[i].url) { [weak self] (detail: Detail?, error) in
+                    guard let self = self else { return }
+                    
                     self.users[i].detail = detail
                     dg.leave()
                 }
