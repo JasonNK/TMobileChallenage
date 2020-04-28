@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var curPage = 1
     let countPerPage = IntConstants.countMainPerPage.rawValue
     var searchText = ""
+    var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,29 +30,31 @@ class ViewController: UIViewController {
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if !searchText.isEmpty {
-            let n = searchText.count
-            if n < self.searchText.count { self.curPage = 1 }
-            isSeaching = true
-            self.searchBar.isUserInteractionEnabled = false
-            let aView = UIActivityIndicatorView()
-            aView.center = self.view.center
-            aView.startAnimating()
-            self.view.addSubview(aView)
-            self.searchText = searchText
-            viewModel.searchFor(username: searchText, curPage: curPage) {
-                DispatchQueue.main.async {
-                    aView.removeFromSuperview()
-                    self.searchBar.isUserInteractionEnabled = true
-                    self.isSeaching = false
-                    self.tableV.reloadData()
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] (t) in
+            guard let self = self else {return}
+            if !searchText.isEmpty {
+                let n = searchText.count
+                if n < self.searchText.count { self.curPage = 1 }
+                self.isSeaching = true
+                let aView = UIActivityIndicatorView()
+                aView.center = self.view.center
+                aView.startAnimating()
+                self.view.addSubview(aView)
+                self.searchText = searchText
+                self.viewModel.searchFor(username: searchText, curPage: self.curPage) {
+                    DispatchQueue.main.async {
+                        aView.removeFromSuperview()
+                        self.isSeaching = false
+                        self.tableV.reloadData()
+                    }
                 }
+            } else {
+                self.curPage = 1
+                self.searchText = ""
             }
-        } else {
-            self.curPage = 1
-            self.searchText = ""
-        }
+        })
+        
         
     }
 
