@@ -26,20 +26,21 @@ class DetailViewController: UIViewController {
     var userDetail: Detail?
     var detailViewModel = DetailViewModel()
     override func viewDidLoad() {
-        
         setUpView()
         searchBar.delegate = self
         detailTableView.dataSource = self
         detailTableView.delegate = self
-        
     }
     
+    /*
+     Initialize every view components
+     */
     func setUpView() {
         navigationItem.title = StringConstants.navigationTitle.rawValue
         guard let username = userDetail?.login else { return }
         avatarImageView.sd_setImage(with: URL(string: userDetail?.avatar_url ?? ""))
-        usernameLabel.text = username
-        emailLabel.text = userDetail?.email
+        usernameLabel.text = StringConstants.userName.rawValue + username
+        emailLabel.text = StringConstants.email.rawValue + (userDetail?.email ?? "")
         locationLabel.text = userDetail?.location
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: StringConstants.rawDateLocale.rawValue)
@@ -58,7 +59,6 @@ class DetailViewController: UIViewController {
                 self.detailTableView.reloadData()
             }
         }
-        
     }
     
 }
@@ -73,7 +73,6 @@ extension DetailViewController: UISearchBarDelegate {
                 return repo.name.lowercased().contains(searchText.lowercased())
             })
         }
-        
         self.detailTableView.reloadData()
     }
     

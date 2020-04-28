@@ -5,6 +5,9 @@ protocol URLSessionProtocol {
 }
 
 extension URLSession: URLSessionProtocol {
+    /*
+     set authentication here when making web requests
+     */
     func getData(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         var request = URLRequest.init(url: url)
         request.httpMethod = StringConstants.requestGet.rawValue
@@ -14,14 +17,15 @@ extension URLSession: URLSessionProtocol {
             completion(data, resp, error)
         }.resume()
     }
-    
-    
 }
 
 
 class WebUtil {
     
     let urlSession: URLSessionProtocol
+    /*
+     here to make it easier for mock url session in testing
+     */
     init(urlSession : URLSessionProtocol = URLSession.shared) {
         self.urlSession = urlSession
     }
@@ -36,17 +40,14 @@ class WebUtil {
                 completion(nil, error)
                 return
             }
-            
             guard let httpResp = resp as? HTTPURLResponse, (200...299).contains(httpResp.statusCode) else {
                 completion(nil, APPError.NILHTTPResponse)
                 return
             }
-            
             guard let data = data else{
                 completion(nil, APPError.DataNIL)
                 return
             }
-            print(String.init(data: data, encoding: .utf8))
             completion(data, nil)
         }
     }
@@ -56,12 +57,10 @@ class WebUtil {
     */
     func getCodedData<T: Codable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
         self.getData(urlString: urlString) { (data, error) in
-            
             if let error = error {
                 completion(nil, error)
                 return
             }
-            
             guard let data = data else{
                 completion(nil, APPError.DataNIL)
                 return
@@ -69,15 +68,9 @@ class WebUtil {
             guard let result = try? JSONDecoder().decode(T.self, from: data) else {
                 completion(nil, APPError.DecodeError);
                 return
-                
             }
-            
             completion(result, nil)
         }
-        
-        
     }
-    
-    
 }
 

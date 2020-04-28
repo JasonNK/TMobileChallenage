@@ -21,18 +21,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.activityView.center = self.view.center
+        activityView.center = view.center
         searchBar.delegate = self
         tableV.dataSource = self
         tableV.delegate = self
         tableV.prefetchDataSource = self
     }
+    
 }
 
 extension ViewController: UISearchBarDelegate {
     
     func prepareSearch(_ curSearchText: String) {
-        if curSearchText.count < self.lastestSearchText.count { self.curPage = 1 }
+        self.curPage = 1
         self.isSeaching = true
         self.activityView.startAnimating()
         self.view.addSubview(self.activityView)
@@ -68,21 +69,13 @@ extension ViewController: UISearchBarDelegate {
             self.lastestSearchText = ""
             return
         }
-        
         self.prepareSearch(searchText)
-        
         self.viewModel.searchFor(username: searchText, curPage: self.curPage) {
             DispatchQueue.main.async {
                 self.searchProcess(searchText)
             }
         }
-    
-        
-
     }
-
-    
-
 }
 
 extension ViewController: UITableViewDataSourcePrefetching {
@@ -113,7 +106,6 @@ extension ViewController: UITableViewDataSourcePrefetching {
             }
         }
     }
-
 }
 
 
@@ -135,10 +127,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let detailViewController = self.storyboard?.instantiateViewController(identifier: StringConstants.detailViewControllerId.rawValue) as? DetailViewController
         detailViewController?.userDetail = viewModel.users[indexPath.row].detail
         navigationController?.pushViewController(detailViewController!, animated: true)
-        
-        
     }
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
 }
 

@@ -23,6 +23,7 @@
 		963B632D24577FA500EF5F4F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B632C24577FA400EF5F4F /* AppError.swift */; };
 		963B632F24579BCA00EF5F4F /* DetailRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B632E24579BCA00EF5F4F /* DetailRepoTableViewCell.swift */; };
 		963B633124587FFB00EF5F4F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963B633024587FFA00EF5F4F /* WebKit.framework */; };
+		963B63332458C99200EF5F4F /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 963B63322458C99000EF5F4F /* Notes.md */; };
 		9A0A4661D203B71A162C9B33 /* Pods_TMobileChallenageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C9A957C452D5E372F3A60 /* Pods_TMobileChallenageTests.framework */; };
 		D34810A1E8451D47842B774A /* Pods_TMobileChallenage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DFE1DFE3F3B6297C54B2BD /* Pods_TMobileChallenage.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		963B632C24577FA400EF5F4F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		963B632E24579BCA00EF5F4F /* DetailRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepoTableViewCell.swift; sourceTree = "<group>"; };
 		963B633024587FFA00EF5F4F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		963B63322458C99000EF5F4F /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		A79721EC14F0A5D9FCF61340 /* Pods-TMobileChallenageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMobileChallenageTests.debug.xcconfig"; path = "Target Support Files/Pods-TMobileChallenageTests/Pods-TMobileChallenageTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		963B62ED244A40FE00EF5F4F = {
 			isa = PBXGroup;
 			children = (
+				963B63322458C99000EF5F4F /* Notes.md */,
 				963B62F8244A40FE00EF5F4F /* TMobileChallenage */,
 				963B630F244A410600EF5F4F /* TMobileChallenageTests */,
 				963B62F7244A40FE00EF5F4F /* Products */,
@@ -110,17 +113,16 @@
 		963B62F8244A40FE00EF5F4F /* TMobileChallenage */ = {
 			isa = PBXGroup;
 			children = (
+				963B63292457712300EF5F4F /* View */,
+				963B63252457703100EF5F4F /* ViewModel */,
+				963B6327245770DE00EF5F4F /* Model */,
+				963B6328245770ED00EF5F4F /* WebUtil */,
+				963B63342458CD4B00EF5F4F /* Storyboard */,
 				963B6326245770CE00EF5F4F /* Constants */,
 				963B62F9244A40FE00EF5F4F /* AppDelegate.swift */,
 				963B62FB244A40FE00EF5F4F /* SceneDelegate.swift */,
-				963B63292457712300EF5F4F /* View */,
-				963B62FF244A40FE00EF5F4F /* Main.storyboard */,
 				963B6302244A410600EF5F4F /* Assets.xcassets */,
-				963B6304244A410600EF5F4F /* LaunchScreen.storyboard */,
 				963B6307244A410600EF5F4F /* Info.plist */,
-				963B6327245770DE00EF5F4F /* Model */,
-				963B6328245770ED00EF5F4F /* WebUtil */,
-				963B63252457703100EF5F4F /* ViewModel */,
 			);
 			path = TMobileChallenage;
 			sourceTree = "<group>";
@@ -176,6 +178,15 @@
 				963B632E24579BCA00EF5F4F /* DetailRepoTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		963B63342458CD4B00EF5F4F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				963B62FF244A40FE00EF5F4F /* Main.storyboard */,
+				963B6304244A410600EF5F4F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		AEDABF1B34069D46A47EFA14 /* Frameworks */ = {
@@ -283,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B63332458C99200EF5F4F /* Notes.md in Resources */,
 				963B6306244A410600EF5F4F /* LaunchScreen.storyboard in Resources */,
 				963B6303244A410600EF5F4F /* Assets.xcassets in Resources */,
 				963B6301244A40FE00EF5F4F /* Main.storyboard in Resources */,
