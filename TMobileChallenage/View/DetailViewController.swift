@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     
@@ -25,7 +26,12 @@ class DetailViewController: UIViewController {
     var userDetail: Detail?
     var detailViewModel = DetailViewModel()
     override func viewDidLoad() {
+        
         setUpView()
+        searchBar.delegate = self
+        detailTableView.dataSource = self
+        detailTableView.delegate = self
+        
     }
     
     func setUpView() {
@@ -46,17 +52,13 @@ class DetailViewController: UIViewController {
         numFollowerLabel.text = String(userDetail?.followers ?? 0) +  StringConstants.followers.rawValue
         numFollowingLabel.text = StringConstants.following.rawValue + String(userDetail?.following ?? 0)
         biographyLabel.text = userDetail?.bio
-        
-        searchBar.delegate = self
-        detailTableView.dataSource = self
-        detailTableView.delegate = self
-        
         detailViewModel.getRepo(username: username) {
             DispatchQueue.main.async {
                 self.detailViewModel.searchRepos = self.detailViewModel.repos
                 self.detailTableView.reloadData()
             }
         }
+        
     }
     
 }
