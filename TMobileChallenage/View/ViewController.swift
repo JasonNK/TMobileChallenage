@@ -31,7 +31,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
-    
+    /*
+     help method for searchBar textDidChange delegate
+     the preparation before searching
+     */
     func prepareSearch(_ curSearchText: String) {
         self.curPage = 1
         self.isSeaching = true
@@ -40,12 +43,20 @@ extension ViewController: UISearchBarDelegate {
         self.lastestSearchText = curSearchText
     }
     
+    /*
+    help method for searchProcess
+    the final step after searching
+    */
     func finishSearch() {
         self.activityView.removeFromSuperview()
         self.isSeaching = false
         self.tableV.reloadData()
     }
     
+    /*
+     help method for searchBar textDidChange delegate
+     the search request
+     */
     func searchProcess(_ lastSearchText: String) {
         if self.lastestSearchText == lastSearchText {
             self.finishSearch()

@@ -13,5 +13,4 @@ enum APPError: Error {
     case NILHTTPResponse
     case DataNIL
     case DecodeError
-    
 }

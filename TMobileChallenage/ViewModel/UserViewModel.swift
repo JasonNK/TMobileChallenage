@@ -17,7 +17,6 @@ class UserViewModel {
      search for certain user's information and get their avartar image and repository count
      */
     func searchFor(username: String, curPage: Int = 1, completion: @escaping () -> ()) {
-        
         let url = StringConstants.userSearchEnd.rawValue + username
         let dg = DispatchGroup()
         webUtil.getCodedData(urlString: url + "&page=\(curPage)") {[weak self] (userStatistic: UserWrapper?, error) in

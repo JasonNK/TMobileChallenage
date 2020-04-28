@@ -19,7 +19,6 @@ class DetailViewModel {
     func getRepo(username: String, completion: @escaping () -> ()) {
         
         webUtil.getCodedData(urlString: StringConstants.repoSearchEnd.rawValue + "\(username)/repos") { (userRepos: [Repo]?, error) in
-            
             self.repos = userRepos ?? []
             completion()
         }

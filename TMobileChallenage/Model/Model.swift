@@ -28,7 +28,6 @@ struct Repo: Codable {
     let html_url: String?
     let forks_count: Int
     let stargazers_count: Int
-    
 }
 
 struct Detail: Codable {

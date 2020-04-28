@@ -73,17 +73,10 @@ class TMobileChallenageTests: XCTestCase {
     }
 
     func testUsers() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
         WebUtil.init(urlSession: MockURLSession()).getCodedData(urlString: "test.users.com") { (users: [User]?, error) in
             XCTAssertNotNil(users)
             XCTAssertEqual(users?.count, 2)
             XCTAssertNil(error)
         }
-        
-        
     }
-
-
 }
