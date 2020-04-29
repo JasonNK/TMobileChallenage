@@ -12,7 +12,7 @@ extension URLSession: URLSessionProtocol {
         var request = URLRequest.init(url: url)
         request.httpMethod = StringConstants.requestGet.rawValue
         request.setValue(StringConstants.requestHeadAcceptValue.rawValue, forHTTPHeaderField: StringConstants.requestHeadAcceptKey.rawValue)
-        request.setValue(StringConstants.requestAuthBasic.rawValue + " " +  StringConstants.requestAuthToken.rawValue.data(using: .utf8)!.base64EncodedString(), forHTTPHeaderField: StringConstants.requestHeadAuthKey.rawValue)
+        request.setValue("Basic NWY4NWU5MmY2NjAwYWJlZTg4YWZlN2JlOGRlOWViZGJlOTRhZDRjYQ==", forHTTPHeaderField: StringConstants.requestHeadAuthKey.rawValue)
         URLSession.shared.dataTask(with: request) { (data, resp, error) in
             completion(data, resp, error)
         }.resume()

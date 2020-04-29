@@ -16,7 +16,6 @@ enum StringConstants: String {
     case requestGet = "GET"
     case requestHeadAcceptValue = "application/vnd.github.v3+json"
     case requestHeadAcceptKey = "Accept"
-    case requestAuthToken = "d42041d254635a946787daf50e502e2525575081"  //"7ed50bcd362f50a86913220e0b7d882f8d859d1e" //
     case requestAuthBasic = "Basic"
     case requestHeadAuthKey = "Authorization"
     case rawDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
