@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
 
@@ -82,11 +83,14 @@ extension ViewController: UISearchBarDelegate {
         }
         self.prepareSearch(searchText)
         self.viewModel.searchFor(username: searchText, curPage: self.curPage) {
-            DispatchQueue.main.async {
-                self.searchProcess(searchText)
-            }
+            self.searchProcess(searchText)
         }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
 }
 
 extension ViewController: UITableViewDataSourcePrefetching {
@@ -97,7 +101,8 @@ extension ViewController: UITableViewDataSourcePrefetching {
                 self.isSeaching = true
                 self.activityView.startAnimating()
                 self.view.addSubview(self.activityView)
-                viewModel.searchFor(username: lastestSearchText, curPage: curPage) {
+                viewModel.searchFor(username: lastestSearchText, curPage: curPage) {[weak self] in
+                    guard let self = self else {return}
                     DispatchQueue.main.async {
                         self.activityView.removeFromSuperview()
                         self.isSeaching = false
@@ -109,16 +114,15 @@ extension ViewController: UITableViewDataSourcePrefetching {
                         }
                         self.tableV.performBatchUpdates({
                             self.tableV.insertRows(at: indexPaths, with: .none)
-                            
-                        }, completion: nil)
-                        self.tableV.reloadRows(at: indexPaths, with: .none)
+                        }) { (_) in
+                            self.tableV.reloadRows(at: indexPaths, with: .none)
+                        }
                     }
                 }
             }
         }
     }
 }
-
 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -129,7 +133,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableV.dequeueReusableCell(withIdentifier: StringConstants.mainCellIdentifier.rawValue, for: indexPath)
         cell.textLabel?.text = viewModel.users[indexPath.row].login
-        cell.imageView?.image = UIImage.init(data: viewModel.users[indexPath.row].image ?? Data())
+        cell.imageView?.sd_setImage(with: URL(string: viewModel.users[indexPath.row].avatar_url), placeholderImage: UIImage(named: StringConstants.placeholder.rawValue))
         cell.detailTextLabel?.text = "Repo: \(viewModel.users[indexPath.row].detail?.public_repos ?? 0)"
         return cell
     }

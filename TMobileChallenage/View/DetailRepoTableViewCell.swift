@@ -17,6 +17,14 @@ class DetailRepoTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    func setUpCellData(repoName: String, fork_count: Int, start_count: Int) {
+        self.repoNameLabel.text = repoName
+        self.statLabel?.text = """
+        \(fork_count) Forks
+        \(start_count) Stars
+        """
+        self.detailTextLabel?.textAlignment = .left
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

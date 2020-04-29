@@ -41,15 +41,17 @@ class DetailViewController: UIViewController {
         avatarImageView.sd_setImage(with: URL(string: userDetail?.avatar_url ?? ""))
         usernameLabel.text = StringConstants.userName.rawValue + username
         emailLabel.text = StringConstants.email.rawValue + (userDetail?.email ?? "")
-        locationLabel.text = userDetail?.location
+        locationLabel.text = StringConstants.location.rawValue + (userDetail?.location ?? "")
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: StringConstants.rawDateLocale.rawValue)
         dateFormatter.dateFormat = StringConstants.rawDateFormat.rawValue
+        var dateContent = StringConstants.joinDate.rawValue
         if let dateString = userDetail?.created_at, let date = dateFormatter.date(from: dateString) {
             let formatter = DateFormatter()
             formatter.dateFormat = StringConstants.targetDateFormat.rawValue
-            joinDateLabel.text = formatter.string(from: date)
+            dateContent += formatter.string(from: date)
         }
+        joinDateLabel.text = dateContent
         numFollowerLabel.text = String(userDetail?.followers ?? 0) +  StringConstants.followers.rawValue
         numFollowingLabel.text = StringConstants.following.rawValue + String(userDetail?.following ?? 0)
         biographyLabel.text = userDetail?.bio
@@ -76,6 +78,10 @@ extension DetailViewController: UISearchBarDelegate {
         self.detailTableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
     
 }
 
@@ -88,15 +94,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         let cellTemp = self.detailTableView.dequeueReusableCell(withIdentifier: StringConstants.detailCellIdentifier.rawValue, for: indexPath) as? DetailRepoTableViewCell
         
         guard let cell = cellTemp else {return DetailRepoTableViewCell()}
-        
-        cell.repoNameLabel?.text = detailViewModel.searchRepos[indexPath.row].name
-        let fork_count = detailViewModel.searchRepos[indexPath.row].forks_count
-        let star_count = detailViewModel.searchRepos[indexPath.row].stargazers_count
-        cell.statLabel?.text = """
-        \(fork_count) Forks
-        \(star_count) Stars
-        """
-        cell.detailTextLabel?.textAlignment = .left
+        cell.setUpCellData(repoName: detailViewModel.searchRepos[indexPath.row].name, fork_count: detailViewModel.searchRepos[indexPath.row].forks_count, start_count: detailViewModel.searchRepos[indexPath.row].stargazers_count)
         return cell
     }
     
@@ -107,5 +105,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
     
 }

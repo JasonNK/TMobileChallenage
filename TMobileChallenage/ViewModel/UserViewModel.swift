@@ -30,12 +30,6 @@ class UserViewModel {
             let n = self.users.count
             for i in 0..<n {
                 dg.enter()
-                self.webUtil.getData(urlString: self.users[i].avatar_url) { [weak self] (data, error) in
-                    guard let self = self else { return }
-                    self.users[i].image = data
-                    dg.leave()
-                }
-                dg.enter()
                 self.webUtil.getCodedData(urlString: self.users[i].url) { [weak self] (detail: Detail?, error) in
                     guard let self = self else { return }
                     self.users[i].detail = detail
